@@ -18,7 +18,11 @@ After completing your problems, reflect on:
 
 1. **What was your initial experience with Python?** How did it compare to other programming languages you've used?
 
+    My initial experience with python was a bit confusing because it seems as though "less is more", while I like java because it has more things written out (hopefully that makes sense).
+
 2. **How did you use AI effectively?** Give specific examples of good prompts you used and what you learned from the responses.
+
+I used AI effectively by asking it to tie the new python lessons to java references that I can understand, I also asked them to make it visually appealing so that it can keep my attention, and lastly I asked to see a visual of how it would look to code in python. I think the references helped me memorize the python lessons more efficiently. In my prompt I gave the AI the role of a python tutor to a student that has intermediate understanding of java. By giving AI a role, the AI understands what is needed from them.
 
 3. **What concepts were most challenging?** How did AI help you understand them?
 

@@ -20,7 +20,10 @@ Remember: The goal is to LEARN, not just get working code!
 
 """
 MY ORIGINAL AI PROMPT:
-I’m learning Python basics in a high school programming class, but I’m having problems understanding my teacher. I have experience in Java,  as a python tutor can you create 5-7 practice problems that get more challenging as they progress? You can utilize my intermediate java experience to make references that I can catch onto for these problems. Please ensure that these practice problems include 
+I’m learning Python basics in a high school programming class, but I’m having problems understanding my teacher. 
+I have experience in Java,  as a python tutor can you create 5-7 practice problems that get more challenging as they progress?
+You can utilize my intermediate java experience to make references that I can catch onto for these problems. 
+Please ensure that these practice problems include 
 Variables and basic data types 
 Conditionals (if/elif/else) 
 Loops (for and while) 
@@ -41,7 +44,6 @@ PROBLEM 1: Variable Basics — “Hello, Python!”
 Concepts: Variables, strings, integers, basic printing 
 Java Parallel: System.out.println, primitive types
 
-Example:
 Problem: Write a function called 'is_even' that takes an integer and returns 
 True if the number is even, False if it's odd.
 
@@ -49,6 +51,8 @@ Example inputs/outputs:
 - is_even(4) should return True
 - is_even(7) should return False
 
+print (is_even(4)) #True
+print (is_even(7)) #False
 
 PROBLEM 2: Conditional Logic — “Even or Odd?”
 Concepts: if/elif/else, modulo operator 

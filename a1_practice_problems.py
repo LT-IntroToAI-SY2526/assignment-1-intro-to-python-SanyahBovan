@@ -4,7 +4,7 @@ Fill in the following function skeletons - descriptions are provided in
 the docstring (the triple quote thing at the top of each function)
 
 Some assert statements have been provided - write more of them to test your code!
-
+Write a function check_even_odd(num) that prints whether a number is even or odd.
 The `raise NotImplementedError(...)`s are placeholders to help you not skip implementing
 a function. They should be removed and replaced with your solution.
 
@@ -27,7 +27,11 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0:
+        return -1 * n
+    return n
+
+   # raise NotImplementedError("absolute")
 
 
 def factorial(n: int) -> int:
@@ -40,7 +44,11 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    result = 1
+    for num in range(1, n+1):
+        result = result * num # result *= num
+    return result
+    # raise NotImplementedError("factorial")
 
 
 T = TypeVar("T")
@@ -57,7 +65,17 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    # This is the pythonic way 
+    return lst[::2]
+
+    # This is the java way
+    # result = []
+    # for index in range (len(lst)):
+    #   if index % 2 == 0:
+    #       result.append(lst[index])
+    # return result
+
+    #  raise NotImplementedError("every_other")
 
 
 def sum_list(lst: List[int]) -> int:
@@ -70,7 +88,13 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    # This is how the built in function is used
+    #  return sum(lst)
+    total = 0
+    for element in lst:
+        total += element
+    # print(total)
+    return total
 
 
 def mean(lst: List[int]) -> float:
@@ -82,7 +106,9 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    return sum_list(lst) / len(lst) if lst else 0
+
+    # raise NotImplementedError("mean")
 
 
 def median(lst: List[int]) -> float:
@@ -119,6 +145,23 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
+    position = 0
+    current = "duck1"
+    while len(lst) > 2:
+        if current == "duck1":
+            current = "duck2"
+            position +=1
+        elif current == "duck2":
+            current = "goose"
+            position += 1
+        else: # current is goose
+            current = "duck1"
+            lst.pop(position)
+
+        # Wrap around
+        if position ==len(lst):
+            position = 0
+    return lst
     raise NotImplementedError("duck_duck_goose")
 
 
@@ -126,16 +169,21 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
 if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
+    assert factorial(5) == 120, "factorial of 5 failed"
+    assert factorial(1) == 1, "factorial of 1 failed"
+    assert factorial(0) == 1, "factorial of 0 failed"
     assert every_other([1, 2, 3, 4, 5]) == [
         1,
         3,
         5,
     ], "every_other of [1,2,3,4,5] failed"
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
+    assert sum_list([4,7,])
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
-
+    names = ["avery","levi","ashley","victoria","maddox"]
+    assert duck_duck_goose(names) == ["levi","victoria"], "duck duck goose assert 2 failed"
     print("All tests passed!")
