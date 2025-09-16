@@ -30,4 +30,4 @@ I think my biggest challenge wasn't the concepts, but instead how to memorize th
 
 4. **What did you learn about collaborating with AI?** What strategies worked best for learning rather than just getting answers?
 
-I learned that 
+I learned that you don't have to go too much into depth with the code in python compared to java. This was shown in examples like problem 4 when I didnt have to declare password as a string and I could just store what I wanted in the variable and python registered it. Asking AI to show the skeleton for the function then writing the code based on that layout, then asking Berg for further clarifications.
