@@ -51,8 +51,6 @@ Example inputs/outputs:
 - is_even(4) should return True
 - is_even(7) should return False
 
-print (is_even(4)) #True
-print (is_even(7)) #False
 
 PROBLEM 2: Conditional Logic — “Even or Odd?”
 Concepts: if/elif/else, modulo operator 
@@ -147,8 +145,6 @@ Bob: 45 - Fail
 Charlie: 67 - Pass
 """
 
-
-
 # =============================================================================
 # PART 3: TESTING YOUR SOLUTIONS
 # =============================================================================
@@ -166,7 +162,16 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 """
 
 print("Testing Problem 1:")
-# Add your tests here
+
+def is_even(n: int):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+    
+print(is_even(4))
+print(is_even(7))
+
 
 print("\nTesting Problem 2:")
 # Add your tests here
