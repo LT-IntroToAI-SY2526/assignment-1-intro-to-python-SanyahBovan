@@ -98,9 +98,6 @@ Enter password: python123
 Access granted.
 
 
-
-
-
 PROBLEM 5: Functions — “Simple Calculator”
 
 Concepts: Functions, parameters, return values
@@ -113,36 +110,6 @@ calculator(10, 5, "add")
 
 calculator(10, 5, "divide")
 # Output: 2.0
-    
-
-
-
-PROBLEM 6: Lists — “Grade Analyzer”
-
-Concepts: Lists, loops, conditionals 
-Java Parallel: ArrayList<Integer> grades
-
-    Example: Given a list of grades, print how many are passing (≥ 60).
-
-    grades = [85, 42, 77, 59, 90]
-# Output:
-3 students passed.
-
-
-PROBLEM 7: Combined Challenge — “Student Report Generator”
-
-Concepts: Lists, functions, conditionals, loops 
-Java Parallel: Combining methods, loops, and arrays
-
-    Example: Write a function generate_report(names, scores) that prints each student’s name, score, and pass/fail status.
-
-names = ["Alice", "Bob", "Charlie"]
-scores = [88, 45, 67]
-
-# Output:
-Alice: 88 - Pass
-Bob: 45 - Fail
-Charlie: 67 - Pass
 """
 
 # =============================================================================
@@ -174,7 +141,7 @@ print(is_even(7))
 
 
 print("\nTesting Problem 2:")
-# Add your tests here
+
 def check_even_odd(t: int):
     if t % 2 == 0:
         return str(t) + " is even"
@@ -186,10 +153,19 @@ print (check_even_odd(7))
 print (check_even_odd(12))
 
 print("\nTesting Problem 3:")
-# Add your tests here
+
+for t in range(5,-1,-1):
+    print(t) 
 
 print("\nTesting Problem 4:")
-# Add your tests here
+
+password = "python123"
+user_input = ""
+while user_input != password:
+    user_input = input("Enter Password: ")
+    if user_input != password:
+        print("Incorrect Password. Try Again.")
+print("Access Granted")
 
 print("\nTesting Problem 5:")
 # Add your tests here
