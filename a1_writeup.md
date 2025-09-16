@@ -30,3 +30,4 @@ I think my biggest challenge wasn't the concepts, but instead how to memorize th
 
 4. **What did you learn about collaborating with AI?** What strategies worked best for learning rather than just getting answers?
 
+I learned that 
