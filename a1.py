@@ -175,6 +175,15 @@ print(is_even(7))
 
 print("\nTesting Problem 2:")
 # Add your tests here
+def check_even_odd(t: int):
+    if t % 2 == 0:
+        return str(t) + " is even"
+    
+    else:
+        return f"{t} is odd"
+    
+print (check_even_odd(7))
+print (check_even_odd(12))
 
 print("\nTesting Problem 3:")
 # Add your tests here
